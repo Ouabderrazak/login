@@ -1,4 +1,4 @@
-// vendor libraries
+// bibliothèques  
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -9,7 +9,7 @@ var path = require('path');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-// custom libraries
+
 // routes
 var route = require('./route');
 // model
@@ -55,29 +55,29 @@ app.use(session({secret: '<mysecret>',
                  saveUninitialized: true,
                  resave: true}));
 
-// GET
+
 app.get('/', route.index);
 
 // signin
-// GET
+
 app.get('/signin', route.signIn);
-// POST
+
 app.post('/signin', route.signInPost);
 
 // signup
-// GET
+
 app.get('/signup', route.signUp);
-// POST
+
 app.post('/signup', route.signUpPost);
 
 // logout
-// GET
+
 app.get('/signout', route.signOut);
 
 /********************************/
 
 /********************************/
-// 404 not found
+// 404 non trouvée
 app.use(route.notFound404);
 
 var server = app.listen(app.get('port'), function(err) {

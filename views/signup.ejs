@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <title><%= title %></title>
+   </head>
+   <body>
+   <! formulaire pour s'inscrire> 
+      <h2>S'inscrire  </h2>
+      <form method="post" action="/signup">
+         <% if(typeof(errorMessage) !== 'undefined') {%>
+         <span><%= errorMessage %></span>
+         <% } %>
+         <p>
+            <label for="username">pseudo</label>
+            <input type="text" name="username" id="username"
+               placeholder="pseudo" required="true"/>
+         </p>
+         <p>
+            <label for="password">mot de passe</label>
+            <input type="text" name="password" id="password"
+               placeholder="mot de passe" required="true"/>
+         </p>
+         <p>
+            <input type="submit" name="signup" id="signup" value="inscrire"/>
+            <a href="/signin" title="sign in">se connecter</a>
+         </p>
+      </form>
+   </body>
+</html>

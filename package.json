@@ -1,6 +1,6 @@
 {
-   "name": "passport_mysql_express_auth",
-   "description": "ExpressJs + Passport.js + MySQL Authentication",
+   "name": "Authentication",
+   "description": "ExpressJs + Passport.js + MySQL ",
    "version": "1.0.0",
    "author": "",
    "main": "app.js",
